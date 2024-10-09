@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Row, Col} from 'react-bootstrap';
 import SchemaArtista from '../schemas/schemaArtista.jsx';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../css/font.css'
 const GetPopularArtistas = () => {
     const [artistas, setArtistas] = useState([]);
 
@@ -14,7 +15,6 @@ const GetPopularArtistas = () => {
                 const TopArtistas = res.data
                     .sort((a, b) => b.monthly_listeners - a.monthly_listeners)
                     .slice(0, 4);
-                console.log('TopArtistas:', TopArtistas);
                 setArtistas(TopArtistas);
             } catch (error) {
                 console.log(error);
@@ -29,7 +29,7 @@ const GetPopularArtistas = () => {
 
     <>
        <Container className="mt-4">
-            <h1 className="text-center mb-4">Artistas Populares</h1>
+            <h1 className="text-center mb-4 titulo">Artistas Populares</h1>
             <Row>
                 {artistas.map((artista, index) => (
                     <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">

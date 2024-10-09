@@ -1,0 +1,22 @@
+.custom-button {
+    text-decoration: none;
+}
+
+.custom-btn {
+    font-size: 1.5rem; 
+    padding: 15px 30px; 
+    background-color: #f8f9fa; 
+    border: none;
+    color: black; 
+    border-radius: 8px;
+}
+
+.custom-btn i {
+    font-size: 1.8rem; 
+    margin-right: 1rem;
+
+}
+
+.custom-btn:hover {
+    background-color: #ddd; 
+}

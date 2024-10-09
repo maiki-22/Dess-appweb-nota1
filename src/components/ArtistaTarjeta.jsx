@@ -1,6 +1,7 @@
 import getArtista from '../metodos/getArtista.jsx';
 import SchemaArtista from '../schemas/schemaArtista.jsx';
 import { useState, useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function ArtistatTarjeta() {

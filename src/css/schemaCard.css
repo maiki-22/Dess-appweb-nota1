@@ -1,0 +1,7 @@
+.hover-card {
+    transition: background-color 0.3s ease;
+}
+
+.hover-card:hover {
+    background-color: #e7e7e7;
+}

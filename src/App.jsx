@@ -1,10 +1,15 @@
-import ArtistatTarjeta from './components/ArtistaTarjeta.jsx';
 import GetPopularArtistas from './metodos/getPopularArtistas.jsx';
+import GetPopularTrack from './metodos/getPopularTrack.jsx';
+import Menu from './components/offCanva.jsx';
+
+
 
 function App() {
   return (
     <>
-      <GetPopularArtistas></GetPopularArtistas>
+      <Menu />
+      <GetPopularArtistas />
+      <GetPopularTrack />
     </>
   );
 }
