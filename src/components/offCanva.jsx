@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/offCanva.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ButtomSearch from './ButtomSearch';
-
+import { Link } from 'react-router-dom';
 
 function Menu() {
   const [show, setShow] = useState(false);
@@ -23,7 +23,9 @@ function Menu() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Maiki Music</Offcanvas.Title>
+          <Offcanvas.Title><Link to='/'>
+            <h2>Maiki Music</h2>
+        </Link></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
             <ButtomSearch></ButtomSearch>

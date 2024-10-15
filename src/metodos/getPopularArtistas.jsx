@@ -33,7 +33,7 @@ const GetPopularArtistas = () => {
             <Row>
                 {artistas.map((artista, index) => (
                     <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-                        <SchemaArtista nombre={artista.name} url_img={artista.image} />
+                        <SchemaArtista nombre={artista.name} url_img={artista.image} id={artista.id}/>
                     </Col>
                 ))}
             </Row>
