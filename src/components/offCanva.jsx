@@ -5,6 +5,10 @@ import '../css/offCanva.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 import ButtomSearch from './ButtomSearch';
 import { Link } from 'react-router-dom';
+import '../css/menulink.css'
+import AddArtistButtom from './ButtomAddArtist';
+import AddTrackButtom from './ButtomAddTrack';
+
 
 function Menu() {
   const [show, setShow] = useState(false);
@@ -23,12 +27,14 @@ function Menu() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><Link to='/'>
+          <Offcanvas.Title><Link to='/' className='menu-link text-decoration-none'>
             <h2>Maiki Music</h2>
         </Link></Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className='space'>
             <ButtomSearch></ButtomSearch>
+            <AddArtistButtom></AddArtistButtom>
+            <AddTrackButtom></AddTrackButtom>
         </Offcanvas.Body>
       </Offcanvas>
     </>

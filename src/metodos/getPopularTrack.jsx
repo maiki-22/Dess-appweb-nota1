@@ -34,7 +34,7 @@ const GetPopularTrack = () => {
             <Row>
                 {tracks.map((track, index) => (
                     <Col key={index} xs={12} sm={6} md={4} lg={3} className="mb-4">
-                        <SchemaTrack nombreTrack={track.name} url_imgTrack={track.image} cantantes={track.artist}/>
+                        <SchemaTrack nombreTrack={track.name} url_imgTrack={track.image} cantantes={track.artist} id={track.id}/>
                     </Col>
                 ))}
             </Row>
