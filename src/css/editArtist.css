@@ -1,0 +1,56 @@
+/* Estilos para el contenedor principal */
+.edit-artist-container {
+    background-color: #f9f9f9;
+    border: 2px solid #323232; /* Borde */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0.5rem 0.5rem #323232; /* Sombra */
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Título */
+  .edit-artist-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Formulario */
+  .edit-artist-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los campos */
+  }
+  
+  /* Inputs del formulario */
+  .edit-artist-input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Botón de actualizar */
+  .edit-artist-button {
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-artist-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Mensajes de alerta */
+  .alert-info {
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  

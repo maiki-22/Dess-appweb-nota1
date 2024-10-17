@@ -3,7 +3,9 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './offCanva.jsx'; 
-
+import '../css/editTrack.css';
+import '../css/font.css'
+import '../css/trackBoton.css';
 function EditTrack() {
   const { id } = useParams(); 
   const navigate = useNavigate(); 
@@ -44,16 +46,16 @@ function EditTrack() {
   return (
     <>
       <Menu />
-      <div className="container mt-5">
-        <h2>Editar Canción</h2>
+      <div className="container mt-5 edit-track-container">
+        <h2 className="edit-track-title titulo">Editar Canción</h2>
         {message && <div className="alert alert-info">{message}</div>}
         <div className="card p-3">
-          <form onSubmit={handleEditTrack}>
+          <form onSubmit={handleEditTrack} className="edit-track-form">
             <div className="mb-3">
               <label htmlFor="name" className="form-label">Nombre de la Canción</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control edit-track-input"
                 id="name"
                 name="name"
                 value={trackData.name}
@@ -65,7 +67,7 @@ function EditTrack() {
               <label htmlFor="image" className="form-label">URL de la Imagen</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control edit-track-input"
                 id="image"
                 name="image"
                 value={trackData.image}
@@ -77,7 +79,7 @@ function EditTrack() {
               <label htmlFor="plays" className="form-label">Reproducciones</label>
               <input
                 type="number"
-                className="form-control"
+                className="form-control edit-track-input"
                 id="plays"
                 name="plays"
                 value={trackData.plays}
@@ -89,7 +91,7 @@ function EditTrack() {
               <label htmlFor="artist" className="form-label">Artista</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control edit-track-input"
                 id="artist"
                 name="artist"
                 value={trackData.artist}
@@ -97,7 +99,25 @@ function EditTrack() {
                 required
               />
             </div>
-            <button type="submit" className="btn btn-primary">Actualizar Canción</button>
+            <button type="submit" className="botonT">
+                  <span className="botonT__text">Actualizar Canción</span>
+                  <span className="botonT__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" className="svg">
+                      <path
+                        style={{ fill: 'none', stroke: '#323232', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: '32px' }}
+                        d="M133.7,360.4,48,464l103.6-85.7a34.54,34.54,0,0,1,6.2-5.2l224.9-224.8a23.93,23.93,0,0,0,0-33.86L364.56,76.9a23.93,23.93,0,0,0-33.86,0L107.1,300.6a34.54,34.54,0,0,1-5.2,6.2Z"
+                      />
+                      <line
+                        x1="294"
+                        y1="176"
+                        x2="370"
+                        y2="252"
+                        style={{ fill: 'none', stroke: '#323232', strokeLinecap: 'round', strokeLinejoin: 'round', strokeWidth: '32px' }}
+                      />
+                    </svg>
+                  </span>
+              </button>
+
           </form>
         </div>
       </div>

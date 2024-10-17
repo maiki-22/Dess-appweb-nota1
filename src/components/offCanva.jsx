@@ -27,7 +27,7 @@ function Menu() {
 
       <Offcanvas show={show} onHide={handleClose}>
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title><Link to='/' className='menu-link text-decoration-none'>
+          <Offcanvas.Title><Link to='/' className='menu-link'>
             <h2>Maiki Music</h2>
         </Link></Offcanvas.Title>
         </Offcanvas.Header>
